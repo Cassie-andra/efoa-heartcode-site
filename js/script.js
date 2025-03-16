@@ -22,3 +22,23 @@ document.addEventListener("DOMContentLoaded", () => {
         playButton.textContent = "Listen Now";
     });
 });
+
+// Set the release date (YYYY, MM-1, DD, HH, MM, SS)
+const releaseDate = new Date(2025, 5, 1, 12, 0, 0).getTime();
+
+const countdownFunction = setInterval(function() {
+  const now = new Date().getTime();
+  const distance = releaseDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+  if (distance < 0) {
+    clearInterval(countdownFunction);
+    document.getElementById("countdown").innerHTML = "The new release is out now!";
+  }
+}, 1000);

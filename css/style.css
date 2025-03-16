@@ -23,6 +23,14 @@ header {
     text-align: center;
 }
 
+body {
+    background-image: url(C:\Users\cassa\OneDrive\Documents\efoa-heartcode-site\assets\images\background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: black; /* Adjust text color for better visibility */
+  }
+  
 header h1 {
     font-size: 24px;
 }
@@ -33,6 +41,12 @@ nav ul {
     display: flex;
 }
 
+.logo {
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
+  }
+  
 nav ul li {
     margin: 0 15px;
 }
@@ -92,6 +106,28 @@ nav ul li a:hover {
     max-width: 500px;
 }
 
+.streaming-links img {
+    width: 40px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .streaming-links img:hover {
+    transform: scale(1.1);
+  }
+  
+  .countdown-container {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  #countdown {
+    font-weight: bold;
+    font-size: 28px;
+    color: #ffcc00;
+  }
+  
 /* Footer */
 footer {
     margin-top: 40px;
