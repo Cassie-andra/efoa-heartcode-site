@@ -171,3 +171,35 @@ footer {
     color: #ffcc00;
   }
   
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #newsletter-popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 400px;
+  }
+  

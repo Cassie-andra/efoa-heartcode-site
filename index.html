@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <script src="particles.js"></script>
+
     <!-- AOS Animation Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -10,7 +11,8 @@
     <title>Efoa Heartcode - Music</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><div id="particles-js"></div>
+
     <header>
         <h1>🎶 Efoa Heartcode 🎶</h1>
         <nav>
@@ -27,9 +29,9 @@
 
     <main>
         <section class="hero">
-            <h2 data-aos="fade-up">Welcome to Efoa Heartcode’s Official Music Site</h2>
-            <p data-aos="zoom-in">Stream the latest hits & stay updated on upcoming events!</p>
-            <button>Listen Now</button>
+            <h1 data-aos="fade-up">Welcome to Efoa Heartcode’s World</h1>
+            <p data-aos="zoom-in">Feel the rhythm, embrace the melody, and join the journey</p>
+            <a href="music.html" class="btn">Listen Now</a>
         </section>
 
         <section class="featured-music">
@@ -55,6 +57,16 @@
         </div>
         <div class="slide fade">
           <img src="assets/images/album3.jpg" alt="Album 3">
+        </div>
+      </div>
+      
+      <div id="newsletter-popup" class="hidden">
+        <div class="popup-content">
+          <h2>🎶 Join the Efoa Heartcode Fan Club! 🎶</h2>
+          <p>Get exclusive content, early access, and behind-the-scenes updates.</p>
+          <input type="email" placeholder="Enter your email" id="newsletter-email" />
+          <button onclick="subscribeNewsletter()">Subscribe</button>
+          <button id="close-popup">Close</button>
         </div>
       </div>
       

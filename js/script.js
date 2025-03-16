@@ -2,6 +2,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Website Loaded!");
 
+    particlesJS.load("particles-js", "particles-config.json", function () {
+      console.log("Particles.js loaded");
+    });
+    
     let slideIndex = 0;
 function showSlides() {
   let slides = document.getElementsByClassName("slide");
@@ -92,3 +96,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+function subscribeNewsletter() {
+  const email = document.getElementById("newsletter-email").value;
+  if (email) {
+    alert("✅ Subscription Successful!");
+    document.getElementById("newsletter-popup").classList.add("hidden");
+  } else {
+    alert("❌ Please enter a valid email!");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    document.getElementById("newsletter-popup").classList.remove("hidden");
+  }, 3000);
+
+  document.getElementById("close-popup").addEventListener("click", function () {
+    document.getElementById("newsletter-popup").classList.add("hidden");
+  });
+});
