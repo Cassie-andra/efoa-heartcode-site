@@ -6,6 +6,32 @@
     font-family: Arial, sans-serif;
 }
 
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+  }
+  
+  .slide img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .fade {
+    animation: fadeEffect 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+  }
+  
 /* Body styling */
 body {
     background-color: #121212;
@@ -135,3 +161,13 @@ footer {
     background: #1DB954;
     color: black;
 }
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .dark-mode a {
+    color: #ffcc00;
+  }
+  

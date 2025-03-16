@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- AOS Animation Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Efoa Heartcode - Music</title>
@@ -12,19 +16,19 @@
         <nav>
             <img src="assets/images/Efoa Heartcode image pic.jpg " alt="Efoa Heartcode Logo" class="logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="home">Home</a></li>
+                <li><a href="music">Music</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="events">Events</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h2>Welcome to Efoa Heartcode’s Official Music Site</h2>
-            <p>Stream the latest hits & stay updated on upcoming events!</p>
+            <h2 data-aos="fade-up">Welcome to Efoa Heartcode’s Official Music Site</h2>
+            <p data-aos="zoom-in">Stream the latest hits & stay updated on upcoming events!</p>
             <button>Listen Now</button>
         </section>
 
@@ -42,6 +46,18 @@
         <p id="countdown"></p>
       </div>
       
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="assets/images/album1.jpg" alt="Album 1">
+        </div>
+        <div class="slide fade">
+          <img src="assets/images/album2.jpg" alt="Album 2">
+        </div>
+        <div class="slide fade">
+          <img src="assets/images/album3.jpg" alt="Album 3">
+        </div>
+      </div>
+      
     <footer>
         <p>&copy; 2025 Efoa Heartcode. All Rights Reserved.</p>
     </footer>
@@ -49,3 +65,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<button id="theme-toggle">🌙 Dark Mode</button>

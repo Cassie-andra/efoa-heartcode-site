@@ -2,6 +2,36 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Website Loaded!");
 
+    let slideIndex = 0;
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change slide every 3 seconds
+}
+showSlides();
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+  });     
+    document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+          duration: 1000, // Animation speed in milliseconds
+          once: true // Run only once per scroll
+        });
+      });
+      
     // Music player controls
     const audioPlayer = document.querySelector("audio");
     const playButton = document.querySelector(".hero button");
@@ -42,3 +72,9 @@ const countdownFunction = setInterval(function() {
     document.getElementById("countdown").innerHTML = "The new release is out now!";
   }
 }, 1000);
+
+const themeToggle = document.getElementById("theme-toggle");
+themeToggle.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+  themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+});
