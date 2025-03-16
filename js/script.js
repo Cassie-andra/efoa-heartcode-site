@@ -74,7 +74,21 @@ const countdownFunction = setInterval(function() {
 }, 1000);
 
 const themeToggle = document.getElementById("theme-toggle");
+
 themeToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
+
+  // Save user preference
+  localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+
   themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
 });
+
+// Load user preference
+document.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    themeToggle.textContent = "☀️ Light Mode";
+  }
+});
+
